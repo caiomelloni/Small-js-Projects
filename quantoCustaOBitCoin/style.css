@@ -1,0 +1,57 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: rgb(147, 147, 206);
+    font-weight: bolder;
+    padding: 2rem;
+    font-size: 3rem;
+    font-variant: small-caps;
+    color: chartreuse;
+    border-radius: 10px 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    height: 50vh;
+}
+
+.cifra {
+    grid-column: 1;
+    font-size: 4rem;
+    padding: 40px 0 0 20px;
+}
+
+.preco::after {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 70px;
+    border-color: greenyellow greenyellow greenyellow transparent;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.preco.rodar::after{
+    transform: rotate(360deg);
+}
+
+.preco {
+    position: relative;
+    grid-column: 2;
+    font-size: 4.5rem;
+    padding-top: 40px;
+}
+
+aside {
+    grid-column: 1/3;
+    font-size: 3rem;
+}
+
